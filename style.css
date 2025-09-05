@@ -9,14 +9,24 @@ p {
     text-align: left;
 }
 
+
+/*--- Тіло ---*/
 body {
     background: rgba(156, 154, 145, 1);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: undefined;
+    gap: 50px;
     padding: 0px 38px 90px 38px;
+    margin: 0;
+}
+
+/*--- Екрани ---*/
+.screen {
+    border-radius: 20px;
+    box-shadow: 0px -2px 2px 0px rgba(232, 232, 232, 0.25),inset 0px 5px 7px 0px rgba(0, 0, 0, 0.25),inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background: rgba(63, 63, 63, 1);
 }
 
 /*--- Верхні кнопки ---*/
@@ -41,4 +51,72 @@ body {
     box-shadow: 4px -4px 10px 0px rgb(0 0 0 / 40%), inset 0px 2px 20px 0px rgb(255 255 255 / 25%), inset 0px -2px 5px 0px rgb(0 0 0 / 25%), inset 0px -10px 20px 6px rgb(0 0 0 / 20%), -4px -4px 10px 0px rgb(0 0 0 / 40%);
     align-items: center;
     justify-content: center;
+}
+
+/*--- Звук і Станція ---*/
+.volume-radio, .song-control {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vr-info {
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+}
+
+/* екран звуку */
+.vr-info .screen {
+    width: 155px;
+    height: 34px;
+    padding: 23px 20px;
+}
+
+ /* шрифт */
+.screen p {
+    color: rgba(172, 201, 148, 0.7);
+    font-family: Pixelify Sans;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0;
+}
+
+/*--- Контроль треку ---*/
+/* кнопки перемикання */
+.next-last-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+}
+
+.nl-button {
+    width: 46px;
+    height: 34px;
+    padding: 23px 49px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4),inset 0px 2px 5px 0px rgba(255, 255, 255, 0.25),inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(63, 62, 57, 1);
+}
+
+/* екран треку */
+.song-control .screen {
+    width: 350px;
+    height: 68px;
+    padding: 20px;
+}
+
+.artist-song {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.song-time {
+    padding-top: 10px;
 }
