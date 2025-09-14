@@ -1,4 +1,9 @@
 /*--- Шрифти ---*/
+@font-face {
+    font-family: "Molle", cursive;
+    src: url('fonts/Molle-Regular.ttf') format('truetype');
+}
+
 p {    
     color: rgba(233, 233, 233, 1);
     font-family: Jersey 25;
@@ -17,9 +22,14 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 50px;
-    padding: 0px 38px 90px 38px;
+    height: 100%;
+    /*gap: 25px;*/
+    padding: 0px 38px;
     margin: 0;
+}
+
+.header, .volume-radio, .song-control {
+    padding-bottom: 1%;
 }
 
 /*--- Екрани ---*/
@@ -46,7 +56,7 @@ body {
 .header-button {
     background: rgba(63, 62, 57, 1);
     width: 80px;
-    height: 100px;
+    height: 90px;
     display: flex;
     box-shadow: 4px -4px 10px 0px rgb(0 0 0 / 40%), inset 0px 2px 20px 0px rgb(255 255 255 / 25%), inset 0px -2px 5px 0px rgb(0 0 0 / 25%), inset 0px -10px 20px 6px rgb(0 0 0 / 20%), -4px -4px 10px 0px rgb(0 0 0 / 40%);
     align-items: center;
@@ -96,12 +106,17 @@ body {
 }
 
 .nl-button {
+    display: flex;
     width: 46px;
     height: 34px;
     padding: 23px 49px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4),inset 0px 2px 5px 0px rgba(255, 255, 255, 0.25),inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
     background: rgba(63, 62, 57, 1);
+}
+
+.previous {
+    justify-content: center;
 }
 
 /* екран треку */
@@ -119,4 +134,91 @@ body {
 
 .song-time {
     padding-top: 10px;
+}
+
+
+/*--- Кнопки відтворення ---*/
+.play-stop-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+}
+
+.ps-button {
+    width: 34px;
+    height: 34px;
+    padding: 23px;
+    border-radius: 20px;
+    box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25),inset 0px 2px 5px 0px rgba(255, 255, 255, 0.25),0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    background: rgba(63, 62, 57, 1);
+}
+
+.play {
+    width: 42px;
+    height: 42px;
+    padding: 19px 20px 19px 18px;
+}
+
+/* --- Колонки та плеєр ---*/
+.playlist-speakers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* колонки */
+.speaker, .speaker-border, .speaker-lattice, .speaker-lattice-second, .speaker-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-border {
+    width: 350px;
+    height: 350px;
+    border-radius: 1000px;
+    box-shadow: inset -18px -21px 5px 0px rgba(0, 0, 0, 0.25),inset 0px 2px 5px 0px rgba(255, 255, 255, 0.25),0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    background: rgba(63, 62, 57, 1);
+}
+
+.speaker-lattice {
+    width: 338px;
+    height: 338px;
+    border-radius: 1000px;
+    box-shadow: inset 18px 21px 34.400001525878906px 0px rgba(0, 0, 0, 0.25),inset -3px -5px 15px 0px rgba(140, 140, 140, 0.25);
+    background: rgba(53, 52, 46, 1);
+    background-image: url('img/pattern.svg');
+}
+
+.speaker-center {
+    width: 120px;
+    height: 120px;
+    border-radius: 1000px;
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.25),inset -2px -2px 8px 0px rgba(246, 246, 246, 0.07),7px 6px 20.600000381469727px 0px rgba(0, 0, 0, 0.35),inset 21px 18px 32.400001525878906px 0px rgba(246, 246, 246, 0.15),inset -21px -18px 32.400001525878906px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(32, 32, 30, 1);
+}
+
+/* плеєр */
+.playlist {
+    position: relative;
+    width: 420px;
+    height: 284px;
+}
+
+.cassette img {
+    position: absolute;
+    width: 420px;
+    height: 284px;
+    z-index: 1;
+}
+
+.playlist-img {
+    position: absolute;
+    width: 420px;
+    height: 284px;
+    /*  background: rgba(50, 49, 45, 0.35);*/
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2),inset 0px -10px 30px 6px rgba(0, 0, 0, 0.2),inset 0px -2px 10px 0px rgba(0, 0, 0, 0.25),inset 0px 2px 20px 0px rgba(255, 255, 255, 0.25);
+    z-index: 2;
 }
